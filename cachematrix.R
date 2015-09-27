@@ -1,4 +1,3 @@
-## Put comments here that give an overall description of what your
 ## The makeCacheMatrix function makes a list with methods that set and get a matrix and its inverse in environment variable
 ## The cacheSolve function takes as arguments the list from the makeCacheMatrix function to calculate and set its inverse.  If the inverse is already set, then cached value is used
 
