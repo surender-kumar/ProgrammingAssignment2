@@ -36,16 +36,15 @@ cacheSolve <- function(x=makeCacheMatrix(1:4, nrow=2, ncol=2),...) {
 		
 		matrixToSolve <- x$get()
 		calculatedInverse <- tryCatch({ 
-    solve(matrixToSolve)
-  }, warning=function(w) {
-    message("This may not be the result you're looking for")
-    message(w)
-  }, error=function(e) {
-    message("Something went wrong solving your matrix")
-    message(e)
-    message("\n")
-  })
-   message("Setting the value of inverse to:") 
-  x$setInverse(calculatedInverse)
-		
+			solve(matrixToSolve)
+		  }, warning=function(w) {
+			message("This may not be the result you're looking for")
+			message(w)
+		  }, error=function(e) {
+			message("Something went wrong solving your matrix")
+			message(e)
+			message("\n")
+		  })
+		message("Setting the value of inverse to:") 
+		x$setInverse(calculatedInverse)
 }
